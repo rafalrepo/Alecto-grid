@@ -1,0 +1,205 @@
+:root {
+    --title: #576671;
+    --subtitle: #000000;
+    --subtext: #87949e;
+    --alectoColor: #17daa3;
+    --hoverColor: #ffff;
+    --backS: #edeff1;
+}
+
+html {
+    font-size: 16px;
+    line-height: 30px;
+    overflow-x: hidden !important;
+}
+
+.container {
+    max-width: 1170px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.header-section{
+    display: grid;
+    justify-content: space-evenly;
+    text-align: center;
+    grid-gap: 0;
+}
+/* Ogólne style Tytułów */
+.background-section{
+    background: var(--backS);
+}
+.title {
+    color: var(--title);
+    font-size: 3.75em;
+    font-weight: 200;
+    letter-spacing: 1.5px;
+}
+
+hr {
+    width: 40px;
+    height: 2px;
+    background: var(--alectoColor);
+}
+
+.subtext {
+    color: var(--subtext);
+    font-size: 1.1em;
+    font-weight: 400;
+    line-height: 30px;
+}
+
+.subtitle {
+    color: var(--subtitle);
+    font-size: 1.9em;
+    font-weight: 400;
+    letter-spacing: 0.75px;
+}
+
+.btn{
+    font-size: 1em;
+    display: inline-block;
+    text-decoration: none;
+    border-radius: 1.5em;
+    padding: 0.9em 2.2em;
+    transition: all 0.5s ease-in-out;
+    letter-spacing: 0.35px;
+    font-weight: 700;
+}
+.btn-fill{      
+    color: var(--hoverColor);
+    background-color: var(--alectoColor);
+    border: 2px solid var(--alectoColor);
+}
+.btn-fill:hover{      
+    color: var(--alectoColor);
+    background-color: var(--hoverColor);
+    border: 2px solid var(--alectoColor);
+}
+
+/*margin section ##################################################### */
+.margin-section-t {
+    margin-top: 3em;
+}
+.margin-section-b {
+    margin-bottom: 3em;
+}
+/* style section #about */
+#about .body-section {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+    justify-content: space-evenly;
+    margin-bottom: 20px;
+}
+
+#about .body-section .one-showcase-about {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    min-height: 370px;
+    justify-content: space-between;
+}
+
+#about .body-section .one-showcase-about .showcase-about-header {
+    position: relative;
+    display: block;
+    width: 182px;
+    height: 182px;
+    border-radius: 50%;
+    margin: 0 auto;
+    transition: 0.5s ease-in-out;
+}
+
+#about .body-section .one-showcase-about .showcase-about-header .fa-background {
+    position: absolute;
+    width: 182px;
+    height: 182px;
+    background-color: var(--subtext);
+    opacity: 0.20;
+    border-radius: 50%;
+}
+
+#about .body-section .one-showcase-about .showcase-about-header span {
+    text-decoration: none;
+    font-size: 3.2em;
+    color: var(--subtext);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: 0.5s ease-in-out;
+}
+
+.showcase-about-header:hover {
+    background-color: var(--alectoColor);
+    cursor: pointer;
+}
+
+#about .body-section .one-showcase-about .showcase-about-header:hover span {
+    color: var(--hoverColor);
+}
+
+
+/* content section */
+
+.content-section{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+/* services section */
+
+#services .body-section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 40px;
+}
+
+.one-showcase-services{
+    display: flex;
+    justify-content: space-between;   
+}
+.one-showcase-services span{
+    font-size: 3em;
+    color: var(--alectoColor);
+    padding-top: 0.5em;
+    padding-right: 1.2em;
+}
+
+.one-showcase-services .subtext {
+    line-height: 40px;
+    padding-top: 20px;
+}
+
+@media (max-width: 575.98px) {
+    #about .body-section {
+        grid-template-columns: 1fr !important;
+    }
+    .one-showcase-services{
+        flex-direction: column;
+        text-align: center;   
+    }
+    .one-showcase-services span{
+        padding-right: 0;
+    }
+}
+
+/* Small devices (landscape phones, less than 768px)*/
+
+@media (max-width: 767.98px) {
+    #about .body-section {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .content-section, #services .body-section {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+/* Medium devices (tablets, less than 992px)*/
+
+@media (max-width: 991.98px) {}
+
+/* Large devices (desktops, less than 1200px)*/
+
+@media (max-width: 1199.98px) {}
