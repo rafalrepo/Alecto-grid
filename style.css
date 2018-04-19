@@ -13,10 +13,11 @@ html {
     overflow-x: hidden !important;
 }
 
-.container {
-    max-width: 1170px;
-    width: 100%;
-    margin: 0 auto;
+
+/* Ogólne style Tytułów */
+
+.background-section {
+    background: var(--backS);
 }
 
 .header-section {
@@ -24,12 +25,6 @@ html {
     justify-content: space-evenly;
     text-align: center;
     grid-gap: 0;
-}
-
-/* Ogólne style Tytułów */
-
-.background-section {
-    background: var(--backS);
 }
 
 .title {
@@ -153,7 +148,7 @@ hr {
 
 .content-section {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr) !important;
 }
 
 /* services section */
@@ -279,6 +274,45 @@ hr {
     border-color: var(--alectoColor);
     cursor: pointer;
 }
+#map .content-section{
+    display: grid;
+    grid-template-columns: 50% 50% !important;
+}
+#map .map-content img{
+    width: 100%;
+}
+
+/* carusel inner */
+.carousel-inner img{
+    width: 150px;
+    height: 150px; 
+}
+.carousel-inner h4{
+    color: var(--hoverColor);  
+    padding: 1em;
+}
+.carousel-inner p{
+    color: var(--hoverColor);  
+    opacity: 0.3;
+    padding: 1em;
+}
+#testimonials{
+    background: url('img/slider-work.png');
+    padding: 90px 0;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    width: 100%;      
+}
+
+#testimonials .carousel-indicators{
+    bottom: -60px;
+} 
+
+#testimonials .carousel-control{        
+        background: none;       
+}
+
 
 @media (max-width: 575.98px) {
     #about .body-section, #pricing .body-section {
@@ -306,6 +340,10 @@ hr {
     .content-section,
     #services .body-section {
         grid-template-columns: 1fr !important;
+    }
+    #map .content-section{
+        display: grid;
+        grid-template-columns: 100% !important;
     }
     
 }
